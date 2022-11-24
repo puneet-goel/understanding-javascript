@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">  
+    <script> document.startTime = new Date() </script>
+    <script src="./index.js"></script>  
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript and DOM working</title>
+    </head>
+    <body>
+        <h1> Before Scripts </h1>
+
+        <script> console.log('Downloading scripts:', new Date() - document.startTime, 'ms') </script>
+        <script src="./check.js" defer></script>
+        
+        <h1> After Scripts </h1>
+    </body>
+    <script> console.log('HTML Parsing ends:', new Date() - document.startTime, 'ms'); </script>
+</html>
