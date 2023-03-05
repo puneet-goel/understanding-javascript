@@ -1,8 +1,11 @@
 Function.prototype.call = function (obj = {}, ...args) {
-	obj.functionRef = this;
-	return obj.functionRef(...args);
+	obj.context = this;
+	let res = obj.context(...args);
+	delete obj.context;
+	return res;
 };
 
+//testing
 const obj = {
 	fname: 'Puneet',
 	lname: 'Goel',
