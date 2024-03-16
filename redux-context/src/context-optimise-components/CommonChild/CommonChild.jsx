@@ -2,12 +2,12 @@ import { useContext } from 'react'
 import { CounterContext } from '../../contexts/counterContext'
 
 const CommonChild = ({ parent }) => {
-	const { counter } = useContext(CounterContext)
+	const { counter, counter2 } = useContext(CounterContext)
 
 	console.log('Common Child ' + parent)
 	return (
 		<div>
-			CommonChild of {parent} {counter}
+			CommonChild of {parent} 1: {counter} 2: {counter2}
 		</div>
 	)
 }

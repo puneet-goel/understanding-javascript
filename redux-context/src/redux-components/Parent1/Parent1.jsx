@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { updateCounter } from '../../slices/slice1'
 
 const Parent1 = () => {
-	const counter = useSelector((state) => state.counter)
+	const counter = useSelector((state) => state.counter.counter)
 	const dispatch = useDispatch()
 
 	const handleClick = () => {

@@ -1,12 +1,12 @@
 import { useSelector } from 'react-redux'
 
 const CommonChild = ({ parent }) => {
-	const counter = useSelector((state) => state.counter)
+	const { counter, counter2 } = useSelector((state) => state.counter)
 
 	console.log('Common Child ' + parent)
 	return (
 		<div>
-			CommonChild of {parent} {counter}
+			CommonChild of {parent} 1: {counter} 2: {counter2}
 		</div>
 	)
 }

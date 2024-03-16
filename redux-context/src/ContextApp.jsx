@@ -6,12 +6,20 @@ export const CounterContext = createContext()
 
 const ContextApp = () => {
 	const [counter, setCounter] = useState(0)
+	const [counter2, setCounter2] = useState(0)
+
 	const updateCounter = () => {
 		setCounter((prev) => prev + 1)
 	}
 
+	const updateCounter2 = () => {
+		setCounter2((prev) => prev + 1)
+	}
+
 	return (
-		<CounterContext.Provider value={{ counter, updateCounter }}>
+		<CounterContext.Provider
+			value={{ counter, counter2, updateCounter, updateCounter2 }}
+		>
 			<div>
 				<h1>Context test</h1>
 				<Parent1 />
