@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+		<meta name="description" content="redux vs context" />
+		<title>Redux vs Context</title>
+	</head>
+	<body>
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<!-- Redux follows subscriber technique, where only components that consumes redux gets rerendered -->
+		<div id="redux"></div>
+
+		<!-- Context does re-render everyhing, everytime you update state -->
+		<div id="context"></div>
+
+		<!-- pending... -->
+		<div id="context-optimise"></div>
+	</body>
+</html>
+
+<!-- 
+	Be it Redux or context both have their own way of handling,
+	and it might lead to rerender a component different number of times,
+	but in the end react does a comparision btw DOM and Virtual DOM and does smart update,
+	(you can inspect and see elements tab instead of whole hard refresh it updates smartly)
+-->
